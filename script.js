@@ -22,6 +22,7 @@ function addTodo() {
             
         </div>
         `;	
+        alert('Task has been added');
     }
 
 }
