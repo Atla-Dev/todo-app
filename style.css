@@ -5,16 +5,37 @@
     padding: 0;
     box-sizing: border-box;
  }
+ :root {
+    --base-color: #f5f5f5;
+    --base-variant: #f5f5f5;
+    --text-color: #000000;
+    --primary-color: #827d7d;
+    --secondary-color: #f5f5f5;
+    --accent-color: #0d75ec;
+    --border-color: #e5e5e5;
+
+ }
+
+ .darkmode {
+    --base-color: #272c32;
+    --base-variant: #272c32;
+    --text-color: #0dcea4;
+    --primary-color: #3b424c;
+    --secondary-color: #414750;
+    --accent-color: #515c6b;
+    --border-color: #35383f; 
+ } 
+  
  body {
     height: 100vh;
-    background: #272c32;
+    background: var(--base-color);
  }
     .container
      {
         top: 50%;
         width: 40%;
         left: 50%;
-        background: #3b424c;
+        background: var(--primary-color);
         border-radius: 10px;
         min-width: 450px;
         position: absolute;
@@ -31,13 +52,13 @@
         width: 75%;
         height: 45px;
         padding: 12px;
-        background-color: #414750;
-        color:#0dcea4;
+        background-color: var(--secondary-color);
+        color:var(--text-color);
         font-weight: 500;
         border-radius: 5px;
         font-family: 'Poppins', sans-serif;
         font-size: 15px;
-        border: 2px solid #35383f;
+        border: 2px solid var(--border-color);
     }
 
     #task-input:focus {
@@ -50,9 +71,9 @@
         float: right;
         font-weight: 500;
         font-size: 16px;
-        background-color: #515c6b;
+        background-color: var(--accent-color);
         border: none;
-        color: #0dcea4;
+        color: var(--text-color);
         cursor: pointer;
         outline: none;
         width: 20%;
@@ -64,8 +85,8 @@
         border-radius: 10px;
         width: 100%;
         position: relative;
-        background-color: #35383f;
-        color: #0dcea4;
+        background-color: var(--border-color);
+        color: var(--text-color);
         padding: 30px 20px;
         margin-top: 10px;
     }
@@ -73,24 +94,31 @@
         border-radius: 5px;
         align-items: center;
         justify-content: space-between;
-        border: 1px solid #35383f;
+        border: 1px solid var(--border-color);
         cursor: pointer;
-        background-color: #3b424c;
+        background-color: var(--primary-color);
         height: 50px;
         margin-bottom: 8px;
         padding: 5px 10px;
         display: flex;
     }
     
-    .task-container span{
+    #task-container span{
         font-family: 'Poppins',sans-serif;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 400;
+    }
+
+    .task {
+        text-align: left;
+        padding-left: 10px;
+        margin: 2px 10px;
+        border: 1px solid var(--border-color);
     }
     
     .task-container button{
-        background-color: #515c6b;
-        color: #0dcea4;
+        background-color: var(--accent-color);
+        color: var(--text-color);
         border: none;
         cursor: pointer;
         outline: none;
@@ -98,4 +126,47 @@
         width: 40px;
         border-radius: 5px;
     }
+    .delete, 
+    .save {
+        background-color: transparent;
+        color: var(--text-color);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+    .delete i,
+    .save i {
+        pointer-events: none;
+        cursor: pointer;
+        color: var(--text-color);
+    }
     
+    #theme-switch {
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        background: var(--base-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    #theme-switch svg {
+        fill: var(--primary-color);
+    }
+
+    #theme-switch svg:last-child {
+        display: none;
+    }
+
+    .darkmode #theme-switch svg:first-child {
+        display: none;
+    }
+
+    .darkmode #theme-switch svg:last-child {
+        display: block;
+    }
