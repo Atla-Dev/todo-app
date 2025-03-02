@@ -1,0 +1,101 @@
+ *,
+ *:before,
+ *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body {
+    height: 100vh;
+    background: #272c32;
+ }
+    .container
+     {
+        top: 50%;
+        width: 40%;
+        left: 50%;
+        background: #3b424c;
+        border-radius: 10px;
+        min-width: 450px;
+        position: absolute;
+        min-height: 100px;
+        transform: translate(-50%, -50%);
+    }
+    
+    #task-input {
+        position: relative;
+        padding: 30px 20px;
+    }
+
+    #task-input input {
+        width: 75%;
+        height: 45px;
+        padding: 12px;
+        background-color: #414750;
+        color:#0dcea4;
+        font-weight: 500;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        border: 2px solid #35383f;
+    }
+
+    #task-input:focus {
+        outline: none;
+        border-color: #0d75ec;
+    }
+
+    #task-input button {
+        position: relative;
+        float: right;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #515c6b;
+        border: none;
+        color: #0dcea4;
+        cursor: pointer;
+        outline: none;
+        width: 20%;
+        height: 45px;
+        border-radius: 5px;
+        font-family: 'Poppins',sans-serif;
+    }
+    #task{
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+        background-color: #35383f;
+        color: #0dcea4;
+        padding: 30px 20px;
+        margin-top: 10px;
+    }
+    .task-container {
+        border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #35383f;
+        cursor: pointer;
+        background-color: #3b424c;
+        height: 50px;
+        margin-bottom: 8px;
+        padding: 5px 10px;
+        display: flex;
+    }
+    
+    .task-container span{
+        font-family: 'Poppins',sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    .task-container button{
+        background-color: #515c6b;
+        color: #0dcea4;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        height: 100%;
+        width: 40px;
+        border-radius: 5px;
+    }
+    
